@@ -5,13 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement; 
 
-
-
-
 public class Player2 : MonoBehaviour
 {
     public VideoPlayer P2LowPunchVP, P2LowPunchMissVP, P2HighPunchVP, P2HighPunchMissVP, P2LowKickVP, P2LowKickMissVP, P2HighKickVP, P2HighKickMissVP, P2SpecialVP;
-    
+    public Button P2SPButton;
     public int p1hp = 100;
     public HealthBar healthbar;
     void Start()
@@ -145,6 +142,10 @@ public class Player2 : MonoBehaviour
         }
     }
 
+    public void button()
+    {
+        P2SPButton.interactable = false;
+    }
 
 
 

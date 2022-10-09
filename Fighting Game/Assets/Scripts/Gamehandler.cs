@@ -6,6 +6,8 @@ using TMPro;
 public class Gamehandler : MonoBehaviour
 {
     public static Gamehandler gamescript;
+
+    public static string P1Name, P2Name;
     public void NextScene()
     {
         SceneManager. LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -22,5 +24,13 @@ public class Gamehandler : MonoBehaviour
         Debug.Log("Exit.");
     }
 
+    public void P1NameInput(string name)
+    {
+        P1Name = name;
+    }
 
+    public void P2NameInput(string name)
+    {
+        P2Name = name;
+    }
 }

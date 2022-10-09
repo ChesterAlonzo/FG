@@ -5,18 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement; 
 
-
-
-
 public class Player1 : MonoBehaviour
 {
     public VideoPlayer P1LowPunchVP, P1LowPunchMissVP, P1HighPunchVP, P1HighPunchMissVP, P1LowKickVP, P1LowKickMissVP, P1HighKickVP, P1HighKickMissVP, P1SpecialVP;
-    
     public int p2hp = 100;
+    public Button P1SPButton;
     public HealthBar healthbar;
     void Start()
     {
-       healthbar.SetMaxHealth(p2hp); 
+       healthbar.SetMaxHealth(p2hp);
     }
     void Update()
     {
@@ -143,6 +140,11 @@ public class Player1 : MonoBehaviour
         {
             SceneManager. LoadScene ("Scene 5");
         }
+    }
+
+    public void button()
+    {
+        P1SPButton.interactable = false;
     }
 
 
